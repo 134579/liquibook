@@ -90,7 +90,7 @@ private:
   book::Cost filled_cost_;
   static uint32_t last_order_id_;
 
-public:
+private:
   const uint32_t order_id_;
 };
 

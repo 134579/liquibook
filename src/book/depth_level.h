@@ -69,7 +69,7 @@ private:
   uint32_t order_count_;
   Quantity aggregate_qty_;
   bool is_excess_;
-public:
+private:
   ChangeId last_change_;
 };
 

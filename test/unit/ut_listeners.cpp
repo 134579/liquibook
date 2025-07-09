@@ -2,6 +2,7 @@
 // All rights reserved.
 // See the file license.txt for licensing information.
 
+#include "book/types.h"
 #define BOOST_TEST_NO_MAIN LiquibookTest
 #include <boost/test/unit_test.hpp>
 
@@ -25,10 +26,10 @@ class TradeCbListener : public TradeListener<TypedOrderBook>
 public:
   virtual void on_trade(const TypedOrderBook* order_book,
                         Quantity qty,
-                        Cost cost)
+                        Price price)
   {
     quantities_.push_back(qty);
-    costs_.push_back(cost);
+    costs_.push_back(qty*price);
   }
 
   void reset()
